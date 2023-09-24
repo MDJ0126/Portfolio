@@ -1,21 +1,21 @@
-title: Abhishek Nagekar
-description: Web & Security Engineer
-site_title: '@abhn - Abhishek Nagekar'
+title: Moon dongjun
+description: Game Programer CC
+site_title: '@Moon dongjun'
 
 # Build settings
 markdown: kramdown
 exclude: [vendor/ruby]
 
 # Personalization
-github_username: abhn
-blog_url: https://www.nagekar.com
+github_username: moondongjun
+blog_url: https://mdj0126.github.io/Portfolio/
 email: abhishek@nagekar.com
-keybase_username: abhn
-twitter_username: abhn_
-reddit_username: abhn
+keybase_username: moondongjun
+twitter_username: moondongjun
+reddit_username: moondongjun
 
 # absolute or relative
-profile_picture: assets/images/pp.jpg
+profile_picture: assets/images/profile.jpg
 
 # Google Analytics ID
 google_analytics: 

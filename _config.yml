@@ -1,14 +1,14 @@
 # Site settings
-title: A.P
-baseurl: "/ap"
-url: "https://kssim.github.io"
+title: Portfolio, 문동준
+baseurl: "/Portfolio"
+url: "https://mdj0126.github.io/"
 google_analytics: # Tracking ID, e.g. "UA-000000-01"
 
 # Author
 author:
-  name: KyeongSeob Sim
-  desc: Hello nice to meet you
-  email: ksub0912@gmail.com
+  name: Moon Dongjun
+  desc: 반갑습니다. 게임 프로그래머
+  email: ehdwns0126@naver.com
   selfie: assets/img/profile.jpg
 
 # social
@@ -17,7 +17,7 @@ social:
   behance:
   bitbucket:
   dribbble:
-  facebook: Test
+  facebook:
   flickr:
   github: kssim
   google_plus:
@@ -31,7 +31,7 @@ social:
   steam:
   tumblr:
   gitlab:
-  twitter: Test
+  twitter:
   vimeo:
   wordpress:
   youtube:

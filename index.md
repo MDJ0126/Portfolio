@@ -3,9 +3,7 @@ layout: about
 ---
 
 # About Me
-There is no specific format here. You can fill out the form you want.  
-For example, you might want to write a brief introduction about your self, experience, interests, publications, and other information.  
-I wrote "about me", "career", and "interests" on this page as an example.  
+안녕하세요. 현직 게임 클라이언트 프로그래머인 문동준입니다.
 
 <br/>
 

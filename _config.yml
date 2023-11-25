@@ -7,7 +7,7 @@ google_analytics: # Tracking ID, e.g. "UA-000000-01"
 # Author
 author:
   name: Moon Dongjun
-  desc: 반갑습니다. 게임 프로그래머
+  desc: 게임 클라이언트 프로그래머 문동준입니다.
   email: ehdwns0126@naver.com
   selfie: assets/img/profile.jpg
 
@@ -19,11 +19,11 @@ social:
   dribbble:
   facebook:
   flickr:
-  github: kssim
+  github: mdj0126
   google_plus:
   instagram:
   keybase:
-  linkedin: https://www.linkedin.com/in/kssim/ 
+  linkedin: 
   pinterest:
   reddit:
   soundcloud:

@@ -1,5 +1,5 @@
 # Site settings
-title: Portfolio, 문동준
+title: 문동준 CV
 baseurl: "/Portfolio"
 url: "https://mdj0126.github.io/"
 google_analytics: # Tracking ID, e.g. "UA-000000-01"
@@ -14,27 +14,27 @@ author:
 # social
 social:
   email: true
-  behance:
-  bitbucket:
-  dribbble:
-  facebook:
-  flickr:
+  behance: 1
+  bitbucket: 1
+  dribbble: 1
+  facebook: 1
+  flickr: 1
   github: mdj0126
-  google_plus:
-  instagram:
-  keybase:
-  linkedin: 
-  pinterest:
-  reddit:
-  soundcloud:
-  stack_exchange:
-  steam:
-  tumblr:
-  gitlab:
-  twitter:
-  vimeo:
-  wordpress:
-  youtube:
+  google_plus: 1
+  instagram: 1
+  keybase: 1
+  linkedin:  1
+  pinterest: 1
+  reddit: 1
+  soundcloud: 1
+  stack_exchange: 1
+  steam: 1
+  tumblr: 1
+  gitlab: 1
+  twitter: 1
+  vimeo: 1
+  wordpress: 1
+  youtube: 1
   default_txt: "Follow On"
 
 # Build settings

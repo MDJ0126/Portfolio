@@ -8,7 +8,9 @@ type: A Company
 
 ## 개인 개발을 위해 시작한 유니티 에셋 프로젝트
 2020년 11월 21일, 릴리즈
+
 유니티 에셋 스토어에서 확인 가능
+
 https://assetstore.unity.com/packages/tools/game-toolkits/designdatatable-263724
 
 # 기능

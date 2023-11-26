@@ -1,13 +1,17 @@
 ---
 layout: post
 title:  "Design Data Table"
-info: "유니티 데이터 테이블 에셋툴"
-tech: "Unity"
-type: A Company
+info: "유니티 에셋 개발툴"
+tech: "Unity Engine Editor"
+type: 개인
 ---
 
 ## 개인 개발을 위해 시작한 유니티 에셋 프로젝트
 2020년 11월 21일, 릴리즈
+
+데이터 테이블을 유니티 에디터 툴로 조작이 가능하며, 즉각 반영 가능
+
+친근한 그리드뷰로 쉬운 사용 가능 및 가이드 문서 제공
 
 유니티 에셋 스토어에서 확인 가능
 

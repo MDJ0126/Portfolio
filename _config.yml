@@ -7,9 +7,10 @@ google_analytics: # Tracking ID, e.g. "UA-000000-01"
 # Author
 author:
   name: Moon Dongjun
-  desc: 게임 클라이언트 프로그래머 문동준입니다.
+  desc: 게임 클라이언트 프로그래머, 6년차
   email: ehdwns0126@naver.com
   selfie: assets/img/profile.jpg
+  start_date: 20180903  // 지킬에서 간단한 연산 지원한다고 함 알아볼 것
 
 # social
 social:

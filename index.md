@@ -3,22 +3,34 @@ layout: about
 ---
 
 # About Me
-안녕하세요. 현직 게임 클라이언트 프로그래머인 문동준입니다.
-
+안녕하세요. 현직 유니티를 주로 사용하고 있는 클라이언트 프로그래머 `문동준`입니다. 재직 중인 회사에서 5년 근무하면서 총 2번의 프로젝트 국내외 출시 및 서비스 유지 보수 진행 중에 있습니다.
 <br/>
 
 # Career
-* Second Company (2012/01 ~ )
-  * Web Application Firewall
-    * Developed TCP network acceleration module.
-    * Developde Application User Interface.
-* First Company (2011/01 ~ 2011/12)
-  * VPN Development Company
-  * Team Leader of VPN Development Div.
-
+* [해긴] 개발2팀 (2018년 09월 ~ 재직중)
+ * 오버독스, 2019년 8월 글로벌 출시]
+  2019년 11월 7일 출시, 현재 서비스 및 유지 보수 중
+ *[데미안 전기, 2023년 4월 글로벌 출시]
+  2020년 10월 출시, 현재 서비스 및 유지 보수 중
+  
+ 주 담당 업무로는, CI(빌드 파이프 라인)를 통해 빌드 자동화 하는 부분을 담당하고 있으며, 최근 AAB(PAD) 구성 R&D 및 배포, 게임 내부 시스템 및 설계, 컨텐츠 추가 개발, 캐릭터 개발 등 진행하고 있습니다.
 <br/>
 
-# Interests
-I am interested in technology trends.  
-I'm not afraid to learn languages, but I enjoy using Python.  
-I like to automate and reduce annoying things.  
+# Introduce
+현재 회사에서 주 담당 업무로는
+1. 빌드 자동화 프로세스인 CI를 사용 및 유지 보수 (젠킨스 사용 중이며, 혼자서 처음부터 구성 진행해 봤습니다.)
+2. 팀 프로젝트 구성을 위한 SVN 및 GIT 구성 및 관리
+3. 최근 AAB 관련 이슈가 있어서 PAD에 대한 R&D를 진행했습니다. (네트워크 차단 또는 불안정, 용량 부족 등 다양한 환경에 대한 스트레스 테스트 검증, PAD 리소스 분할)
+4. 게임 내부의 전반적인 데이터 관리, 구조 설계 및 보수, 비 프로그래머 직군 위한 간단한 툴 작성
+5. 타 파트 또는 팀 간 협업 (사업 BM에 대한 이해, 인앱 광고 프로세스 협업, 마케팅팀 광고에 대한 필요 리소스 제공 안내 및 툴 제작)
+
+프로그래밍 개발 지식으로는
+1. 자료 구조에 대한 기본 개념
+2. 절차 지향 및 객체 지향에 대한 이해 및 빠른 디버깅 추적
+3. 파일 또는 통신에 대한 시리얼라이즈부터 바이너리 읽고 쓰는 과정 이해
+4. 전반적인 유니티 게임 엔진에 대한 이해 (Invoke와 Coroutine 차이, Coroutine 최적화, 프로파일링, 드로우콜 이해)
+5. 현재 주로 사용하는 디자인 패턴에 대한 이해 (싱글턴, 옵저버, MVC)
+
+프로그래밍에 대해서 늘 공부하기 위해, 개인 개발 블로그도 운영 중입니다. (https://moondongjun.tistory.com)
+
+담당하는 업무에 있어서는 끝까지 책임지고 일정을 지키고 있으며, 프로젝트 긴급 일정으로 인해 시간 부족할 경우 야근 및 주말 출근 또는 원격 업무로 최대한 처리하려고 합니다. 집요하게 처리하려는 부분은 개인적으로 성격적인 부분이며, 직무 상 가끔 있는 이벤트라 생각하는 편입니다.

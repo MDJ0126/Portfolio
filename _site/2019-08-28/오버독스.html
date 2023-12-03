@@ -41,14 +41,89 @@
   <h2 class="post-title">오버독스</h2>
   <div class="post-line"></div>
 
-  <h2 id="회사-프로젝트-오버독스">회사 프로젝트 오버독스</h2>
+  <div class="video-container">
+  <div class="video-thumbnail" style="background-image: url('/Portfolio/assets/thumbnails/Overdox.jpg');">
+    <button class="play-button" onclick="playVideo('/Portfolio/assets/videos/Overdox.mp4')"></button>
+  </div>
+  <video id="Overdox" width="640" height="360" style="display: none;">
+    <source src="/Portfolio/assets/videos/Overdox.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<style>
+	.video-container {
+		position: relative;
+		max-width: 640px;
+		margin: 0 auto;
+	}
+
+	.video-thumbnail {
+		background-size: cover;
+		background-position: center;
+		cursor: pointer;
+		position: relative;
+		height: 0;
+		padding-bottom: 56.25%; /* 16:9 비율에 맞게 설정 (높이 / 너비 * 100) */
+	}
+
+	.play-button {
+		width: 80px;
+		height: 80px;
+		background-color: transparent;
+		border: none;
+		background-image: url('/Portfolio/assets/img/play-button.png'); /* 원하는 이미지로 교체하세요 */
+		background-size: cover;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		cursor: pointer;
+	}
+    @media (max-width: 640px) {
+	video {
+	width: 100%;
+	}
+    }
+</style>
+
+<script>
+  function playVideo(videoUrl) {
+    var video = document.getElementById('Overdox');
+    var thumbnail = document.querySelector('.video-thumbnail');
+    
+    thumbnail.style.display = 'none';
+    video.style.display = 'block';
+    
+    video.src = videoUrl;
+    video.play();
+  }
+</script>
+
+<h3 id="회사-프로젝트-오버독스">회사 프로젝트 오버독스</h3>
 <ul>
-  <li>오버독스, 2019년 8월 글로벌 출시
- 2019년 11월 7일 출시, 현재 서비스 및 유지 보수 중</li>
+  <li>
+    <p>오버독스, 2019년 8월 글로벌 출시</p>
+
+    <p>2019년 11월 7일 출시, 현재 서비스 및 유지 보수 중</p>
+  </li>
 </ul>
 
-<h2 id="tech">Tech</h2>
-<p>This is a project using Unity.</p>
+<h3 id="프로젝트-참여-기간">프로젝트 참여 기간</h3>
+<p>2018년 9월 3일 부터 참여 ~ 현재까지 진행 중</p>
+
+<h3 id="담당-업무">담당 업무</h3>
+<ul>
+  <li>NGUI를 이용한 컨텐츠 작업</li>
+  <li>SVN을 이용한 프로젝트 관리 담당</li>
+</ul>
+
+<h3 id="소감">소감</h3>
+<p>입사하자마자, Unity 엔진 및 NGUI에 익숙해지는데 많은 시간을 소모했던 신입 기간이었습니다.</p>
+
+<p>런칭 전 개발 기간 1년 정도 참여하면서 신입 위치에 맞는 업무들을 담당했습니다.</p>
+
+<p>이때 기본적인 UI에 대한 개념 및 구조등 많은 것을 배웠으며, 차기작에는 좀 더 개선된 개발 방법을 찾는데 도움되었습니다.</p>
 
 
 </div>
@@ -66,7 +141,7 @@
 
     <footer>
       <span>
-        &copy; <time datetime="2023-12-03 17:19:04 +0900">2023</time> Moon Dongjun.
+        &copy; <time datetime="2023-12-03 19:34:46 +0900">2023</time> Moon Dongjun.
       </span>
     </footer>
   </body>

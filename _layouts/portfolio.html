@@ -6,7 +6,11 @@ layout: base
   {% for post in paginator.posts %}
     <a href="{{ post.url | prepend: site.baseurl }}" class="portfolio-item">
 	  <div style="float:left;">
-		<img class="portfolio-thumbnail" src="{{ site.baseurl }}/assets/img/{{ post.image_path}}/thumbnail.jpg" alt="thumbnail">
+		{% if post.thumbnail %}
+			<img class="portfolio-thumbnail" src="{{ site.baseurl }}/assets/thumbnails/{{ post.thumbnail }}" alt="thumbnail">
+		{% else %}
+			<img class="portfolio-thumbnail" src="{{ site.baseurl }}/assets/thumbnails/no_thumbnail.png" alt="thumbnail">
+		{% endif %}
 	  </div>
       <div style="float:left;">
         <h1 class="portfolio-title">{{ post.title }}</h1>

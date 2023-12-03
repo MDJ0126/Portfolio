@@ -1,5 +1,6 @@
 ---
 layout: post
+thumbnail: "design_data_table.jpg"
 title:  "Design Data Table"
 info: "유니티 에셋 개발툴"
 tech: "Unity Engine Editor"

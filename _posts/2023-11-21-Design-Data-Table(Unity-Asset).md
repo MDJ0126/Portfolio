@@ -4,10 +4,10 @@ title:  "Design Data Table"
 info: "유니티 에셋 개발툴"
 tech: "Unity Engine Editor"
 type: 개인
-image_path: "assets/img/desing_data_table"
+image_path: "desing_data_table"
 ---
 
-![image]({{ site.baseurl }}/{{ page.image_path }}/1.png){: width="80%" height="80%"}
+![image]({{ site.baseurl }}/assets/img/{{ page.image_path }}/1.png){: width="80%" height="80%"}
 
 ### 개인 개발을 위해 시작한 유니티 에셋 프로젝트
 2020년 11월 21일, 릴리즈
@@ -22,7 +22,7 @@ image_path: "assets/img/desing_data_table"
 * [https://assetstore.unity.com/packages/tools/game-toolkits/designdatatable-263724](https://assetstore.unity.com/packages/tools/game-toolkits/designdatatable-263724)
 
 ### 기능
-![image]({{ site.baseurl }}/{{ page.image_path }}/2.png){: width="80%" height="80%"}
+![image]({{ site.baseurl }}/assets/img/{{ page.image_path }}/2.png){: width="80%" height="80%"}
 * 그리드 테이블을 이용한 데이터 관리 시스템
 * C#의 대부분의 데이터 형식을 지원 (long, int, DateTime, string)
 * CSV 임포트·익스포트
@@ -34,17 +34,17 @@ image_path: "assets/img/desing_data_table"
 ### 예제
 
 1. 뱀파이어 서바이벌 라이크 예제
-![image]({{ site.baseurl }}/{{ page.image_path }}/4.png){: width="80%" height="80%"}
+![image]({{ site.baseurl }}/assets/img/{{ page.image_path }}/4.png){: width="80%" height="80%"}
 
 2. 상점 상품 UI 리스트 예제
-![image]({{ site.baseurl }}/{{ page.image_path }}/5.png){: width="80%" height="80%"}
+![image]({{ site.baseurl }}/assets/img/{{ page.image_path }}/5.png){: width="80%" height="80%"}
 
 ### 블로그 포스팅
 * [[Unity Asset] Design Data Table 릴리즈](https://moondongjun.tistory.com/113)
 
 ### 소감
 
-![image]({{ site.baseurl }}/{{ page.image_path }}/6.png){: width="60%" height="60%"}
+![image]({{ site.baseurl }}/assets/img/{{ page.image_path }}/6.png){: width="60%" height="60%"}
 원래는 개인 프로젝트 작업을 시작하려고 했는데, 중간에 데이터 관리는 어떻게 해야하나에 고민에 빠졌고, 마침 에디터툴을 많이 다루고 있던 시기여서, 데이터 테이블 작업을 에디터 내부에서 동시에 하면 얼마나 편하고 좋을까에서 시작되었습니다.
 
 혹시나 해서 에셋 스토어에 찾아봤지만, 제가 원하던 일반적인 그리드뷰(엑셀)같은 디자인은 전혀 없었고, 없으면 만들자라는 생각이 들어 제작을 하였습니다.

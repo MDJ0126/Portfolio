@@ -5,7 +5,10 @@ layout: base
 <div class="portfolio">
   {% for post in paginator.posts %}
     <a href="{{ post.url | prepend: site.baseurl }}" class="portfolio-item">
-      <div>
+	  <div style="float:left;">
+		<img class="portfolio-thumbnail" src="{{ site.baseurl }}/assets/img/{{ post.image_path}}/thumbnail.jpg" alt="thumbnail">
+	  </div>
+      <div style="float:left;">
         <h1 class="portfolio-title">{{ post.title }}</h1>
         <div class="portfolio-line"></div>
 

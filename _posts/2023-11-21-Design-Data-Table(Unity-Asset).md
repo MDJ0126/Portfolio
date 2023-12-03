@@ -4,9 +4,10 @@ title:  "Design Data Table"
 info: "유니티 에셋 개발툴"
 tech: "Unity Engine Editor"
 type: 개인
+image_path: "assets/img/desing_data_table"
 ---
 
-![제목](/profile.jpg)
+![image]({{ site.baseurl }}/{{ page.image_path }}/1.png){: width="80%" height="80%"}
 
 ## 개인 개발을 위해 시작한 유니티 에셋 프로젝트
 2020년 11월 21일, 릴리즈
@@ -17,9 +18,11 @@ type: 개인
 
 유니티 에셋 스토어에서 확인 가능
 
-https://assetstore.unity.com/packages/tools/game-toolkits/designdatatable-263724
+## 에셋 스토어 링크
+* [https://assetstore.unity.com/packages/tools/game-toolkits/designdatatable-263724](https://assetstore.unity.com/packages/tools/game-toolkits/designdatatable-263724)
 
-# 기능
+## 기능
+![image]({{ site.baseurl }}/{{ page.image_path }}/2.png){: width="80%" height="80%"}
 * 그리드 테이블을 이용한 데이터 관리 시스템
 * C#의 대부분의 데이터 형식을 지원 (long, int, DateTime, string)
 * CSV 임포트·익스포트
@@ -28,8 +31,13 @@ https://assetstore.unity.com/packages/tools/game-toolkits/designdatatable-263724
 * 샘플 예제 2 - 상점 UI에서 아이템 리스트 그리기
 * 사용법에 대한 PDF형식의 가이드 문서 제공
 
-# 블로그 포스팅
-https://moondongjun.tistory.com/113
+## 예제
 
-## Tech
-This is a project using Unity.  
+1. 뱀파이어 서바이벌 라이크 예제
+![image]({{ site.baseurl }}/{{ page.image_path }}/4.png){: width="80%" height="80%"}
+
+2. 상점 상품 UI 리스트 예제
+![image]({{ site.baseurl }}/{{ page.image_path }}/5.png){: width="80%" height="80%"}
+
+### 블로그 포스팅
+* [[Unity Asset] Design Data Table 릴리즈](https://moondongjun.tistory.com/113)

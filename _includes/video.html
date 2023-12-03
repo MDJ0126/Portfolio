@@ -1,4 +1,53 @@
-<video width="640" height="360" controls>
-  <source src="{{ site.baseurl }}/assets/videos/{{ include.id }}" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<div class="video-container">
+  <div class="video-thumbnail" style="background-image: url('{{ site.baseurl }}/assets/thumbnails/{{ include.id }}.jpg');">
+    <button class="play-button" onclick="playVideo('{{ site.baseurl }}/assets/videos/{{ include.id }}.mp4')"></button>
+  </div>
+  <video id="{{ include.id }}" width="640" height="360" style="display: none;">
+    <source src="{{ site.baseurl }}/assets/videos/{{ include.id }}.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<style>
+  .video-container {
+    position: relative;
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .video-thumbnail {
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 비율에 맞게 설정 (높이 / 너비 * 100) */
+  }
+
+  .play-button {
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+    border: none;
+    background-image: url('play-button.png'); /* 원하는 이미지로 교체하세요 */
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  function playVideo(videoUrl) {
+    var video = document.getElementById('{{ include.id }}');
+    var thumbnail = document.querySelector('.video-thumbnail');
+    
+    thumbnail.style.display = 'none';
+    video.style.display = 'block';
+    
+    video.src = videoUrl;
+    video.play();
+  }
+</script>

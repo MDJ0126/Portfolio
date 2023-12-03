@@ -259,12 +259,14 @@ GEM
       unf_ext
     unf_ext (0.0.9.1-x64-mingw-ucrt)
     unicode-display_width (1.8.0)
+    webrick (1.8.1)
 
 PLATFORMS
   x64-mingw-ucrt
 
 DEPENDENCIES
   github-pages
+  webrick
 
 BUNDLED WITH
    2.4.19

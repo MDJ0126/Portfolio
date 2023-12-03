@@ -43,6 +43,8 @@ image_path: "assets/img/desing_data_table"
 * [[Unity Asset] Design Data Table 릴리즈](https://moondongjun.tistory.com/113)
 
 ### 소감
+
+![image]({{ site.baseurl }}/{{ page.image_path }}/6.png){: width="60%" height="60%"}
 원래는 개인 프로젝트 작업을 시작하려고 했는데, 중간에 데이터 관리는 어떻게 해야하나에 고민에 빠졌고, 마침 에디터툴을 많이 다루고 있던 시기여서, 데이터 테이블 작업을 에디터 내부에서 동시에 하면 얼마나 편하고 좋을까에서 시작되었습니다.
 
 혹시나 해서 에셋 스토어에 찾아봤지만, 제가 원하던 일반적인 그리드뷰(엑셀)같은 디자인은 전혀 없었고, 없으면 만들자라는 생각이 들어 제작을 하였습니다.

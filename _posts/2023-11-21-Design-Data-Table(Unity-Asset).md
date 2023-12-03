@@ -6,6 +6,8 @@ tech: "Unity Engine Editor"
 type: 개인
 ---
 
+![제목](/profile.jpg)
+
 ## 개인 개발을 위해 시작한 유니티 에셋 프로젝트
 2020년 11월 21일, 릴리즈
 

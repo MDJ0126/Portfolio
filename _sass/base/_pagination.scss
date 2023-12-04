@@ -5,9 +5,21 @@
   position: relative;
   text-align: center;
 
-  span {
-    color: $default-shade;
-    font-size: 1.1rem;
+  .page-number {
+    @include transition(all .3s ease-out);
+    color: $default-color;
+    font-size: 0.9rem;
+    position: relative; /* 변경된 부분 */
+
+    &:hover,
+    &:focus {
+      opacity: .6;
+      text-decoration: none;
+    }
+  }
+
+  .current-page {
+    font-weight: bold; /* 변경된 부분 */
   }
 
   .top {
@@ -21,11 +33,11 @@
     }
   }
 
-  .next {
+  .prev, .next {
     @include transition(all .3s ease-out);
     color: $default-color;
     font-size: 0.9rem;
-    position: absolute;
+    position: relative; /* 변경된 부분 */
 
     &:hover,
     &:focus {
@@ -41,4 +53,9 @@
   .right {
     right: 0;
   }
+}
+
+.spacer {
+  margin: 0 10px; // 원하는 간격으로 조정
+  display: inline-block; // 공백을 화면에 표시하기 위해
 }

@@ -34,14 +34,24 @@ layout: base
     </br>
   {% endfor %}
 </div>
-
 <div class="pagination">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="left next">Prev</a>
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="page-number prev">Prev</a>
   {% endif %}
-  {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="right next">Next</a>
-  {% endif %}
+  
+  <span class="spacer"></span>
 
-  <span>{{ paginator.page }}</span>
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <span class="page-number current-page">{{ page }}</span>
+    {% else %}
+      <a style="width: 50px; height: 50px;" href="{{ site.baseurl }}{% if page == 1 %}/portfolio{% else %}/portfolio/page{{ page }}{% endif %}" class="page-number"> {{ page }} </a>
+    {% endif %}
+  {% endfor %}
+
+  <span class="spacer"></span>
+
+  {% if paginator.next_page %}
+    <a href="{{ site.baseurl }}{{ paginator.next_page_path }}" class="page-number next">Next</a>
+  {% endif %}
 </div>

@@ -1,7 +1,6 @@
-<div class="video-container">
-  <div class="video-thumbnail" style="background-image: url('{{ site.baseurl }}/assets/thumbnails/{{ include.id }}.jpg');">
-    <button class="play-button" onclick="playVideo('{{ site.baseurl }}/assets/videos/{{ include.id }}.mp4')"></button>
-  </div>
+<div class="video-container" onmouseover="hoverThumbnail()" onmouseout="unhoverThumbnail()" onclick="playVideo('{{ site.baseurl }}/assets/videos/{{ include.id }}.mp4')">
+  <div class="video-thumbnail" style="background-image: url('{{ site.baseurl }}/assets/thumbnails/{{ include.id }}.jpg');"></div>
+  <button class="play-button" onclick="playVideo('{{ site.baseurl }}/assets/videos/{{ include.id }}.mp4')"></button>
   <video id="{{ include.id }}" width="640" height="360" style="display: none;">
     <source src="{{ site.baseurl }}/assets/videos/{{ include.id }}.mp4" type="video/mp4">
     Your browser does not support the video tag.
@@ -9,49 +8,80 @@
 </div>
 
 <style>
-	.video-container {
-		position: relative;
-		max-width: 640px;
-		margin: 0 auto;
-	}
+  .video-container {
+    position: relative;
+    max-width: 640px;
+    margin: 0 auto;
+  }
 
-	.video-thumbnail {
-		background-size: cover;
-		background-position: center;
-		cursor: pointer;
-		position: relative;
-		height: 0;
-		padding-bottom: 56.25%; /* 16:9 비율에 맞게 설정 (높이 / 너비 * 100) */
-	}
+  .video-thumbnail {
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 비율에 맞게 설정 (높이 / 너비 * 100) */
+    filter: brightness(0.7); /* 어두운 효과를 주는 필터, 1이 원래 밝기입니다 (0~1 범위 사용) */
+    transition: filter 0.3s ease-in-out; /* 애니메이션 속성 추가 */
+  }
 
-	.play-button {
-		width: 80px;
-		height: 80px;
-		background-color: transparent;
-		border: none;
-		background-image: url('{{ site.baseurl }}/assets/img/play-button.png'); /* 원하는 이미지로 교체하세요 */
-		background-size: cover;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		cursor: pointer;
-	}
-    @media (max-width: 640px) {
-	video {
-	width: 100%;
-	}
+  .play-button {
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+    border: none;
+    background-image: url('{{ site.baseurl }}/assets/img/play-button.png'); /* 원하는 이미지로 교체하세요 */
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out; /* 애니메이션 속성 추가 */
+  }
+
+  .video-container:hover .video-thumbnail {
+    filter: brightness(1); /* 호버 상태일 때 원래 밝기로 복원하는 애니메이션 효과 */
+  }
+
+  .video-container.playing .video-thumbnail {
+    display: none; /* 재생 중일 때 썸네일을 숨깁니다 */
+  }
+
+  .video-container.hovered .play-button {
+    transform: translate(-50%, -50%) scale(1.2); /* 썸네일 호버 상태일 때 버튼 애니메이션 효과 */
+  }
+
+  .video-container.playing .play-button {
+    display: none; /* 재생 중일 때 버튼을 숨깁니다 */
+  }
+
+  @media (max-width: 640px) {
+    video {
+      width: 100%;
     }
+  }
 </style>
 
 <script>
+  function hoverThumbnail() {
+    var container = document.querySelector('.video-container');
+    container.classList.add('hovered');
+  }
+
+  function unhoverThumbnail() {
+    var container = document.querySelector('.video-container');
+    container.classList.remove('hovered');
+  }
+
   function playVideo(videoUrl) {
     var video = document.getElementById('{{ include.id }}');
-    var thumbnail = document.querySelector('.video-thumbnail');
-    
-    thumbnail.style.display = 'none';
+    var container = document.querySelector('.video-container');
+
+    container.classList.add('playing');
+    container.classList.remove('hovered');
+
     video.style.display = 'block';
-    
     video.src = videoUrl;
     video.play();
   }

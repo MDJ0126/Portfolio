@@ -64,25 +64,40 @@
 </style>
 
 <script>
-  function hoverThumbnail() {
-    var container = document.querySelector('.video-container');
-    container.classList.add('hovered');
-  }
+	function hoverThumbnail() {
+		var container = document.querySelector('.video-container');
+		container.classList.add('hovered');
+	}
 
-  function unhoverThumbnail() {
-    var container = document.querySelector('.video-container');
-    container.classList.remove('hovered');
-  }
+	function unhoverThumbnail() {
+		var container = document.querySelector('.video-container');
+		container.classList.remove('hovered');
+	}
 
-  function playVideo(videoUrl) {
+function playVideo(videoUrl) {
     var video = document.getElementById('{{ include.id }}');
     var container = document.querySelector('.video-container');
+
+    // Check if the video is already playing
+    if (container.classList.contains('playing')) {
+        return;
+    }
 
     container.classList.add('playing');
     container.classList.remove('hovered');
 
     video.style.display = 'block';
     video.src = videoUrl;
+    video.controls = true; // Add controls to the video
     video.play();
-  }
+
+    // Add an event listener to detect when the video has ended
+    video.addEventListener('ended', function() {
+        container.classList.remove('playing');
+        video.style.display = 'none';
+    });
+}
+
+
+
 </script>

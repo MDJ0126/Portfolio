@@ -12,11 +12,10 @@ layout: base
 
 <div class="pagination">
   {% if page.next.url %}
-    <a href="{{ page.next.url | prepend: site.baseurl }}" class="left next">Prev</a>
+    <a href="{{ page.next.url | prepend: site.baseurl }}" class="left next" style="float: left">Prev</a>
   {% endif %}
-  {% if page.previous.url %}
-    <a href="{{ page.previous.url | prepend: site.baseurl }}" class="right next">Next</a>
-  {% endif %}
-
   <a href="#" class="top">Top</a>
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url | prepend: site.baseurl }}" class="right next" style="float: right">Next</a>
+  {% endif %}
 </div>

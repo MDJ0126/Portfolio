@@ -1,0 +1,22 @@
+---
+layout: default
+title: Security Page
+---
+<!-- security.html Java Scripts -->
+  <script>
+	document.addEventListener('DOMContentLoaded', async function () {
+		  // Jekyll에서 페이지에 삽입한 변수 사용
+		  const blockedIPs = {{ site.blocked_ips | jsonify }};
+
+		  // 현재 사용자의 IP 주소를 얻기 위해 외부 서비스를 호출합니다.
+		  const response = await fetch('https://api64.ipify.org?format=json');
+		  const data = await response.json();
+		  const userIP = data.ip;
+
+		  // 차단된 IP 목록에 현재 사용자의 IP가 포함되어 있는지 확인하여 404 페이지로 이동
+		  if (blockedIPs.includes(userIP)) {
+			window.location.href = '/404.html';
+		  }
+		});
+  </script>
+<!-- security.html Java Scripts -->

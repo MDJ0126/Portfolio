@@ -10,8 +10,11 @@
 		  const userIP = data.ip;
 
 		  // 차단된 IP 목록에 현재 사용자의 IP가 포함되어 있는지 확인하여 404 페이지로 이동
-		  if (blockedIPs.includes(userIP)) {
-			window.location.href = '/404.html';
+		  if (blockedIPs !== null)
+		  {
+			  if (blockedIPs.includes(userIP)) {
+				window.location.href = '/404.html';
+			  }
 		  }
 		});
   </script>

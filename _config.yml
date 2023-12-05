@@ -4,9 +4,9 @@ baseurl: "/Portfolio"
 url: "https://mdj0126.github.io/"
 google_analytics: # Tracking ID, e.g. "UA-000000-01"
 blocked_ips:
-  - "211.44.192.125" # 해긴 아이피
-  # - "116.43.238.111" # 다중 아이피 추가 가능
-  # - "116.43.238.123"
+   - "211.44.192.125" # 해긴 아이피
+  # - "XXX.XXX.XXX.XXX" # 다중 아이피 추가 가능
+  # - "XXX.XXX.XXX.XXX" # 다중 아이피 추가 가능
   
 # Author
 author:

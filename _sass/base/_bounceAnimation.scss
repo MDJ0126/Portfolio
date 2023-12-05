@@ -2,7 +2,8 @@
 
 /* Bounce animation for the image */
 .bounce {
-  animation: bounceAnimation 0.5s ease-in-out;
+  animation: bounceAnimation 1.0s ease-in-out; /* 반복 횟수는 기본값인 1번 */
+  animation-iteration-count: 2; /* 2번 반복 */
 }
 
 @keyframes bounceAnimation {
@@ -10,7 +11,7 @@
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-10px);
+    transform: translateY(-15px);
   }
   60% {
     transform: translateY(-5px);

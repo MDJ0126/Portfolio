@@ -23,11 +23,9 @@
             }
             if (isOpen)
             {
-                const blocker = document.getElementById('blocker');
                 // 페이지 로드 후 흰색 박스 사라지도록 클래스 추가
-                window.onload = function () {
-                    blocker.classList.add('blocked-content');
-                };
+                const blocker = document.getElementById('blocker');
+                blocker.classList.add('blocked-content');
             }
         });
     </script>

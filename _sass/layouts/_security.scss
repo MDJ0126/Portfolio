@@ -6,7 +6,7 @@
     height: 100%;
     background: white;
     z-index: 9999;
-    transition: opacity 0.2s ease; /* 0.2초 동안 투명도를 변경하는 애니메이션 */
+    transition: opacity 0.15s ease; /* 0.2초 동안 투명도를 변경하는 애니메이션 */
     pointer-events: none; /* 이벤트를 무시하여 하위 요소에 대한 상호 작용을 허용합니다. */
 }
 

@@ -8,13 +8,22 @@
             const response = await fetch('https://api64.ipify.org?format=json');
             const data = await response.json();
             const userIP = data.ip;
+            var isOpen = false;
 
             // 차단된 IP 목록에 현재 사용자의 IP가 포함되어 있는지 확인하여 404 페이지로 이동
-            if (blockedIPs !== null && blockedIPs.includes(userIP)) {
-                window.location.href = '/404.html';
+            if (blockedIPs !== null) {
+                if (blockedIPs.includes(userIP)) {
+                    window.location.href = '/404.html';
+                }
+                else {
+                    isOpen = true;
+                }
             } else {
+                isOpen = true;
+            }
+            if (isOpen)
+            {
                 const blocker = document.getElementById('blocker');
-
                 // 페이지 로드 후 흰색 박스 사라지도록 클래스 추가
                 window.onload = function () {
                     blocker.classList.add('blocked-content');

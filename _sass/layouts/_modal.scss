@@ -1,0 +1,44 @@
+/* 일반 이미지 스타일 */
+.modal-target-image {
+  cursor: pointer;
+  margin:auto;
+}
+
+/* 모달 스타일 */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+
+  .modal-content {
+    background-color: white;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 3px solid white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px; /* 모서리를 둥글게 만듭니다. */
+
+    // 이미지의 최대 너비를 100%로 설정하여 부모의 너비에 맞게 하고, 최대 높이도 설정하여 비율 유지
+    img {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}
+
+/* 이미지 스타일 */
+.popup-image {
+  max-width: 100%;
+  max-height: 100%;
+}

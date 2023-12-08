@@ -4,7 +4,11 @@
   {% include head.html %}
 
   <body>
+  
+  <!-- 블럭 -->
     <div id="blocker"></div>
+  <!-- 블럭 -->
+  
     <nav class="nav">
       <div class="nav-container">
         <a href="{{ site.baseurl }}/">
@@ -26,5 +30,14 @@
         &copy; <time datetime="{{ site.time }}">{{ site.time | date: '%Y' }}</time> {{ site.author.name }}.
       </span>
     </footer>
+	
+  <!-- 모달 -->
+	<div id="myModal" class="modal" onclick="toggleModal()">
+		<div class="modal-content" id="modalContent">
+		  <img id="modalImage" class="popup-image">
+		</div>
+	</div>
+  <!-- 모달 -->
+  
   </body>
 </html>

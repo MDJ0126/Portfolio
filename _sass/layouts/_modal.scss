@@ -6,7 +6,7 @@
 
 /* 모달 스타일 */
 .modal {
-  display: none;
+  display: flex;
   position: fixed;
   top: 0;
   left: 0;
@@ -15,6 +15,10 @@
   background-color: rgba(0, 0, 0, 0.7);
   justify-content: center;
   align-items: center;
+  
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
 
   .modal-content {
     background-color: white;
@@ -35,6 +39,11 @@
       max-height: 100%;
     }
   }
+}
+
+.modal.show {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* 이미지 스타일 */

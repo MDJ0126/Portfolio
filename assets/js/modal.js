@@ -4,12 +4,28 @@ function toggleModal(imageSrc) {
 
   if (imageSrc) {
     modalImage.src = imageSrc;
+
+    // Reset styles before opening the modal
+    modal.style.opacity = 0;
     modal.style.display = "flex";
-    document.body.style.overflow = "hidden";
+
+    // Trigger a reflow before adding the 'show' class
+    modal.offsetHeight;
+
+    // Add the 'show' class to apply the fade-in effect
+    modal.classList.add("show");
+
+    // Listen for the 'transitionend' event to set final styles
+    modal.addEventListener("transitionend", function transitionEndHandler() {
+      modal.removeEventListener("transitionend", transitionEndHandler);
+      modal.style.opacity = 1;
+    });
     adjustModalSize();
   } else {
+    // Adjust the timing of styles for closing the modal
+    modal.classList.remove("show");
+    modal.style.opacity = 0;
     modal.style.display = "none";
-    document.body.style.overflow = "auto";
   }
 }
 

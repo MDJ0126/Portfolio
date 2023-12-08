@@ -41,8 +41,8 @@ function adjustModalSize() {
   var imageRatio = originalWidth / originalHeight;
 
   // 모달의 너비와 높이
-  var modalWidth = window.innerWidth * 0.9;
-  var modalHeight = window.innerHeight * 0.9;
+  var modalWidth = window.innerWidth * 0.75;
+  var modalHeight = window.innerHeight * 0.75;
 
   // 모달의 너비와 높이에 따라 이미지 크기 조절
   if (imageRatio > 1) {

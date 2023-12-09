@@ -3,24 +3,27 @@ function toggleModal(imageSrc) {
   var modalImage = document.getElementById("modalImage");
 
   if (imageSrc) {
+    modalImage.onload = function () {
+      // Reset styles before opening the modal
+      modal.style.opacity = 0;
+      modal.style.display = "flex";
+
+      // Trigger a reflow before adding the 'show' class
+      modal.offsetHeight;
+
+      // Add the 'show' class to apply the fade-in effect
+      modal.classList.add("show");
+
+      // Listen for the 'transitionend' event to set final styles
+      modal.addEventListener("transitionend", function transitionEndHandler() {
+        modal.removeEventListener("transitionend", transitionEndHandler);
+        modal.style.opacity = 1;
+      });
+
+      adjustModalSize();
+    };
+
     modalImage.src = imageSrc;
-
-    // Reset styles before opening the modal
-    modal.style.opacity = 0;
-    modal.style.display = "flex";
-
-    // Trigger a reflow before adding the 'show' class
-    modal.offsetHeight;
-
-    // Add the 'show' class to apply the fade-in effect
-    modal.classList.add("show");
-
-    // Listen for the 'transitionend' event to set final styles
-    modal.addEventListener("transitionend", function transitionEndHandler() {
-      modal.removeEventListener("transitionend", transitionEndHandler);
-      modal.style.opacity = 1;
-    });
-    adjustModalSize();
   } else {
     // Adjust the timing of styles for closing the modal
     modal.classList.remove("show");

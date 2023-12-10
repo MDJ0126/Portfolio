@@ -54,22 +54,35 @@
 			
 			
 			// =========================================================
+			// 3. 홈페이지 해금 처리 검사
+			// =========================================================
+			const unlockPassword = localStorage.getItem('unlockPassword');
+			var isUnlock = makePassword() == unlockPassword;
+			
+			// =========================================================
 			// 결과 처리
 			// =========================================================
-			if (!isAvailableIP)
+			var isEnableSite = false;
+			if (!isAvailableIP || !isOpenSite)
 			{
-				window.location.href = '{{ '/404' | prepend: site.baseurl }}/';
+				if (isUnlock)
+				{
+					isEnableSite = true;
+				}
 			}
-			else if (!isOpenSite)
+			
+			if (isEnableSite)
 			{
-				window.location.href = '{{ '/lock' | prepend: site.baseurl }}/';
-			}
-			else 
-			{
-                // 페이지 로드 후 흰색 박스 사라지도록 클래스 추가
+                // 사이트 블록 제거, (입장 처리)
                 const blocker = document.getElementById('blocker');
                 blocker.classList.add('blocked-content');
 			}
+			else 
+			{
+				// 잠금 페이지 이동
+				window.location.href = '{{ '/lock' | prepend: site.baseurl }}/';
+			}
         });
     </script>
+	<script src="{{ "/assets/js/password.js" | relative_url }}"></script>
 <!-- security.html Java Scripts -->

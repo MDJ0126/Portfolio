@@ -32,20 +32,25 @@
 			// =========================================================
 			// _config.yml에서 open_date 변수 읽기
 			var openDateString = '{{ site.open_date }}';
+			var isOpenSite = true;
+			
+			if (openDateString !== null)
+			{
 
-			// "19000101" 형식을 YYYYMMDD에서 YYYY-MM-DD로 변환
-			var formattedDateString = openDateString.replace(/(\d{4})(\d{2})(\d{2})/, '$1-$2-$3');
-			console.log("Site open date: " + formattedDateString);
+				// "19000101" 형식을 YYYYMMDD에서 YYYY-MM-DD로 변환
+				var formattedDateString = openDateString.replace(/(\d{4})(\d{2})(\d{2})/, '$1-$2-$3');
+				console.log("Site open date: " + formattedDateString);
 
-			// ISO 형식으로 변환하여 Date 객체 생성
-			var openDate = new Date(formattedDateString + 'T00:00:00Z');
+				// ISO 형식으로 변환하여 Date 객체 생성
+				var openDate = new Date(formattedDateString + 'T00:00:00Z');
 
-			// 현재 날짜 가져오기
-			var currentDate = new Date();
-			currentDate.setHours(0, 0, 0, 0);
-
-			// 오픈 기한과 현재 날짜 비교
-			var isOpenSite = currentDate <= openDate;
+				// 현재 날짜 가져오기
+				var currentDate = new Date();
+				currentDate.setHours(0, 0, 0, 0);
+			
+				// 오픈 기한과 현재 날짜 비교
+				isOpenSite = currentDate <= openDate;
+			}
 			
 			
 			// =========================================================

@@ -36,32 +36,35 @@ function adjustModalSize() {
   var modalContent = document.getElementById("modalContent");
   var modalImage = document.getElementById("modalImage");
 
-  // 이미지의 원래 너비와 높이
-  var originalWidth = modalImage.naturalWidth;
-  var originalHeight = modalImage.naturalHeight;
+  if (modalImage !== null)
+  {
+	  // 이미지의 원래 너비와 높이
+	  var originalWidth = modalImage.naturalWidth;
+	  var originalHeight = modalImage.naturalHeight;
 
-  // 이미지의 비율 계산
-  var imageRatio = originalWidth / originalHeight;
+	  // 이미지의 비율 계산
+	  var imageRatio = originalWidth / originalHeight;
 
-  // 모달의 너비와 높이
-  var modalWidth = window.innerWidth * 0.75;
-  var modalHeight = window.innerHeight * 0.75;
+	  // 모달의 너비와 높이
+	  var modalWidth = window.innerWidth * 0.75;
+	  var modalHeight = window.innerHeight * 0.75;
 
-  // 모달의 너비와 높이에 따라 이미지 크기 조절
-  if (imageRatio > 1) {
-    // 이미지가 가로로 넓을 경우
-    modalImage.style.width = modalWidth + "px";
-    modalImage.style.height = modalWidth / imageRatio + "px";
+	  // 모달의 너비와 높이에 따라 이미지 크기 조절
+	  if (imageRatio > 1) {
+		// 이미지가 가로로 넓을 경우
+		modalImage.style.width = modalWidth + "px";
+		modalImage.style.height = modalWidth / imageRatio + "px";
 
-    // 추가: 이미지의 크기가 모달의 높이보다 크면 모달의 높이에 맞게 가로 조절
-    if (modalImage.height > modalHeight) {
-      modalImage.style.width = modalHeight * imageRatio + "px";
-      modalImage.style.height = modalHeight + "px";
-    }
-  } else {
-    // 이미지가 세로로 길 경우
-    modalImage.style.height = modalHeight + "px";
-    modalImage.style.width = modalHeight * imageRatio + "px";
+		// 추가: 이미지의 크기가 모달의 높이보다 크면 모달의 높이에 맞게 가로 조절
+		if (modalImage.height > modalHeight) {
+		  modalImage.style.width = modalHeight * imageRatio + "px";
+		  modalImage.style.height = modalHeight + "px";
+		}
+	  } else {
+		// 이미지가 세로로 길 경우
+		modalImage.style.height = modalHeight + "px";
+		modalImage.style.width = modalHeight * imageRatio + "px";
+	  }
   }
 }
 

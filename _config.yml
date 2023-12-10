@@ -3,7 +3,7 @@ title: 문동준
 baseurl: "/Portfolio"
 url: "https://mdj0126.github.io/"
 google_analytics: # Tracking ID, e.g. "UA-000000-01"
-open_date: 20231231 # 사이트 오픈 기간
+open_date: 20231231 # 사이트 오픈 기간 -> 사이트 오픈 기간까지만 입장이 가능합니다. (비워두면 기간 체크 없이 항상 입장 가능)
 blocked_ips:
    - "211.44.192.125" # 해긴 아이피
   # - "XXX.XXX.XXX.XXX" # 다중 아이피 추가 가능

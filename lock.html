@@ -66,7 +66,7 @@
 		  font-size: 200px;
 		  font-weight: 900;
 		  margin: 0px;
-		  color: #262626;
+		  color: #c5c5c5;
 		  text-transform: uppercase;
 		  letter-spacing: -40px;
 		  margin-left: -20px;
@@ -82,7 +82,7 @@
 		  font-size: 16px;
 		  font-weight: 700;
 		  text-transform: uppercase;
-		  color: #262626;
+		  color: #c5c5c5;
 		  margin: 0px;
 		  letter-spacing: 3px;
 		  padding-left: 6px;
@@ -125,6 +125,8 @@
             width: 100%;
             padding: 8px;
             margin-bottom: 10px;
+		    border: none;
+		    outline: none;
         }
 	</style>
 	
@@ -144,7 +146,7 @@
 		
 		<button id="passwordOpenButton" style="opacity: 0; width: 100%; height: 200px" onclick="showPasswordArea()"></button>
 		<div id="passwordArea" style="display: none">
-			<input type="password" id="password" name="password" placeholder="Enter your password" onkeydown="submitOnEnter(event)">
+			<input type="password" id="password" class="no-drag" name="password" placeholder="Enter your password" onkeydown="submitOnEnter(event)">
 		</div>
 	</div>
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
@@ -208,6 +210,15 @@
             alert("비밀번호가 틀렸습니다. 다시 시도하세요.");
         }
     }
+	
+	// 드레그 방지
+	document.addEventListener("DOMContentLoaded", function() {
+    var noDragElement = document.querySelector('.no-drag');
+
+    noDragElement.addEventListener('dragstart', function(event) {
+      event.preventDefault();
+    });
+  });
 </script>
 	
 </html>

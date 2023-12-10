@@ -68,17 +68,17 @@
 				isEnableSite = isUnlock;
 			}
 			
-			<!-- if (isEnableSite) -->
-			<!-- { -->
-                <!-- // 사이트 블록 제거, (입장 처리) -->
-                <!-- const blocker = document.getElementById('blocker'); -->
-                <!-- blocker.classList.add('blocked-content'); -->
-			<!-- } -->
-			<!-- else  -->
-			<!-- { -->
-				<!-- // 잠금 페이지 이동 -->
-				<!-- window.location.href = '{{ '/lock' | prepend: site.baseurl }}/'; -->
-			<!-- } -->
+			if (isEnableSite)
+			{
+                // 사이트 블록 제거, (입장 처리)
+                const blocker = document.getElementById('blocker');
+                blocker.classList.add('blocked-content');
+			}
+			else 
+			{
+				// 잠금 페이지 이동
+				window.location.href = '{{ '/lock' | prepend: site.baseurl }}/';
+			}
         });
     </script>
 	<script src="{{ "/assets/js/password.js" | relative_url }}"></script>

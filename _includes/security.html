@@ -1,85 +1,84 @@
 <!-- security.html Java Scripts -->
-    <script defer>
-        document.addEventListener('DOMContentLoaded', async function () {
-			// =========================================================
-			// 1. 차단 아이피 검사
-			// =========================================================
-			// _config.yml에서 blocked_ips 배열 변수 읽기
-            const blockedIPs = {{ site.blocked_ips | jsonify }};
+<script defer>
+document.addEventListener('DOMContentLoaded', async function () {
+	// =========================================================
+	// 1. 차단 아이피 검사
+	// =========================================================
+	// _config.yml에서 blocked_ips 배열 변수 읽기
+	const blockedIPs = {{ site.blocked_ips | jsonify }};
+	
+	// 현재 사용자의 IP 주소를 얻기 위해 외부 서비스를 호출합니다.
+	const response = await fetch('https://api64.ipify.org?format=json');
+	const data = await response.json();
+	const userIP = data.ip;
+		console.log("Your Address: " + userIP);
+	var isAvailableIP = false;
+	
+	// 차단된 IP 목록에 현재 사용자의 IP가 포함되어 있는지 확인하여 404 페이지로 이동
+	if (blockedIPs !== null) 
+		{
+	if (!blockedIPs.includes(userIP)) 
+			{
+	    isAvailableIP = true;
+	}
+	}
+		else 
+		{
+	isAvailableIP = true;
+	}
+		
+	// =========================================================
+	// 2. 홈페이지 오픈 기한 검사
+	// =========================================================
+	// _config.yml에서 open_date 변수 읽기
+	var openDateString = '{{ site.open_date }}';
+	var isOpenSite = true;
+	
+	if (openDateString !== null)
+	{
+		// "19000101" 형식을 YYYYMMDD에서 YYYY-MM-DD로 변환
+		var formattedDateString = openDateString.replace(/(\d{4})(\d{2})(\d{2})/, '$1-$2-$3');
+		console.log("Site open date: " + formattedDateString);
 
-            // 현재 사용자의 IP 주소를 얻기 위해 외부 서비스를 호출합니다.
-            const response = await fetch('https://api64.ipify.org?format=json');
-            const data = await response.json();
-            const userIP = data.ip;
-			console.log("Your Address: " + userIP);
-            var isAvailableIP = false;
+		// ISO 형식으로 변환하여 Date 객체 생성
+		var openDate = new Date(formattedDateString + 'T00:00:00Z');
 
-            // 차단된 IP 목록에 현재 사용자의 IP가 포함되어 있는지 확인하여 404 페이지로 이동
-            if (blockedIPs !== null) 
-			{
-                if (!blockedIPs.includes(userIP)) 
-				{
-                    isAvailableIP = true;
-                }
-            }
-			else 
-			{
-                isAvailableIP = true;
-            }
-			
-			// =========================================================
-			// 2. 홈페이지 오픈 기한 검사
-			// =========================================================
-			// _config.yml에서 open_date 변수 읽기
-			var openDateString = '{{ site.open_date }}';
-			var isOpenSite = true;
-			
-			if (openDateString !== null)
-			{
-
-				// "19000101" 형식을 YYYYMMDD에서 YYYY-MM-DD로 변환
-				var formattedDateString = openDateString.replace(/(\d{4})(\d{2})(\d{2})/, '$1-$2-$3');
-				console.log("Site open date: " + formattedDateString);
-
-				// ISO 형식으로 변환하여 Date 객체 생성
-				var openDate = new Date(formattedDateString + 'T00:00:00Z');
-
-				// 현재 날짜 가져오기
-				var currentDate = new Date();
-				currentDate.setHours(0, 0, 0, 0);
-			
-				// 오픈 기한과 현재 날짜 비교
-				isOpenSite = currentDate <= openDate;
-			}
-			
-			
-			// =========================================================
-			// 3. 홈페이지 해금 처리 검사
-			// =========================================================
-			const unlockPassword = localStorage.getItem('unlockPassword');
-			var isUnlock = makePassword() == unlockPassword;
-			
-			// =========================================================
-			// 결과 처리
-			// =========================================================
-			var isEnableSite = true;
-			if (!isAvailableIP || !isOpenSite)
-			{
-				isEnableSite = isUnlock;
-			}
-			
-			if (isEnableSite)
-			{
-                // 사이트 블록 제거, (입장 처리)
-                const blocker = document.getElementById('blocker');
-                blocker.classList.add('blocked-content');
-			}
-			else 
-			{
-				// 잠금 페이지 이동
-				window.location.href = '{{ '/lock' | prepend: site.baseurl }}/';
-			}
-        });
-    </script>
-	<script src="{{ "/assets/js/password.js" | relative_url }}"></script>
+		// 현재 날짜 가져오기
+		var currentDate = new Date();
+		currentDate.setHours(0, 0, 0, 0);
+	
+		// 오픈 기한과 현재 날짜 비교
+		isOpenSite = currentDate <= openDate;
+	}
+	
+	
+	// =========================================================
+	// 3. 홈페이지 해금 처리 검사
+	// =========================================================
+	const unlockPassword = localStorage.getItem('unlockPassword');
+	var isUnlock = makePassword() == unlockPassword;
+	
+	// =========================================================
+	// 결과 처리
+	// =========================================================
+	var isEnableSite = true;
+	if (!isAvailableIP || !isOpenSite)
+	{
+		isEnableSite = isUnlock;
+	}
+	
+	if (isEnableSite)
+	{
+		// 사이트 블록 제거, (입장 처리)
+		const blocker = document.getElementById('blocker');
+		blocker.classList.add('blocked-content');
+	}
+	else 
+	{
+		// 잠금 페이지 이동
+		window.location.href = '{{ '/lock' | prepend: site.baseurl }}/';
+	}
+});
+</script>
+<script src="{{ "/assets/js/password.js" | relative_url }}"></script>
 <!-- security.html Java Scripts -->

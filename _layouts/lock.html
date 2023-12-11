@@ -204,8 +204,8 @@
         // 간단한 예제로 현재 날짜가 정확한 비밀번호라고 가정
         var currentDate = makePassword();
         if (enteredPassword === currentDate) {
-			localStorage.setItem('unlockPassword', enteredPassword);
-			window.history.back();
+		localStorage.setItem('unlockPassword', enteredPassword);
+		window.location.href = "{{ '/' | prepend: site.baseurl }};
         } else {
             alert("비밀번호가 틀렸습니다. 다시 시도하세요.");
         }

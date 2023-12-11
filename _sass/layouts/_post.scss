@@ -44,4 +44,28 @@
     font-style: normal;
     text-align: center;
   }
+	&-thumbnail{
+	    position: relative; /* 상대 위치 지정 */
+		float: left;
+		width: 300px;
+	}
+	&-board{
+		float: left;
+		width: 300px;
+	}
+}
+
+@media (max-width: 806px) {
+	.post {
+		&-thumbnail{
+			float: none;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+		}
+		&-board{
+			float: none;
+			width: 100%;
+		}
+	}
 }

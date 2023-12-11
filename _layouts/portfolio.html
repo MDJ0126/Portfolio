@@ -11,6 +11,23 @@ layout: base
 		{% else %}
 			<img class="portfolio-thumbnail" src="{{ site.baseurl }}/assets/thumbnails/no_thumbnail.png" alt="thumbnail">
 		{% endif %}
+		
+		{% if post.tag-red %}
+			<div class="overlayText-red">{{ post.tag-red }}</div>
+		{% endif %}
+		
+		{% if post.tag-blue %}
+			<div class="overlayText-blue">{{ post.tag-blue }}</div>
+		{% endif %}
+		
+		{% if post.tag-green %}
+			<div class="overlayText-green">{{ post.tag-green }}</div>
+		{% endif %}
+		
+		{% if post.tag-gray %}
+			<div class="overlayText-gray">{{ post.tag-gray }}</div>
+		{% endif %}
+		
 		</div>
 		<div class="post-board"  style="margin-left: 2em;">
 			<h1 class="portfolio-title">{{ post.title }}</h1>

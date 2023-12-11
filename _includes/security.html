@@ -78,7 +78,31 @@ document.addEventListener('DOMContentLoaded', async function () {
 		// 잠금 페이지 이동
 		window.location.href = '{{ '/lock' | prepend: site.baseurl }}/';
 	}
+	
+	// 로그 아웃 버튼 만들기
+    var logoutButton = document.getElementById('logoutButton');
+
+    if (logoutButton) {
+		// 홈페이지가 닫혔을 때, 로그인해서 들어온 사람에게만 버튼을 띄운다.
+		if (!isAvailableIP || !isOpenSite)
+		{
+			logoutButton.style.display = "block";
+		}
+		else
+		{
+			<!-- logoutButton.style.display = "none"; -->
+		}
+		logoutButton.addEventListener('click', function() {
+			logout();
+		});
+    }
 });
+// 뒤로가기 함수
+function logout() {
+	localStorage.removeItem('unlockPassword');
+	// 잠금 페이지 이동
+	window.location.href = '{{ '/lock' | prepend: site.baseurl }}/';
+}
 </script>
 <script src="{{ "/assets/js/password.js" | relative_url }}"></script>
 <!-- security.html Java Scripts -->

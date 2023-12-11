@@ -14,3 +14,14 @@
     /* 차단된 컨텐츠 스타일링 */
     opacity: 0;
 }
+
+#logoutButton {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 64px;
+	height: 64px;
+	padding: 20px 20px;
+	opacity: 0.3;
+	cursor: pointer;
+}

@@ -8,7 +8,7 @@ permalink: /about/
 <br><br>
 
 ## Skill
-* _Unity engine_
+* _Unity3D engine_
 * _C#_
 <br><br>
 

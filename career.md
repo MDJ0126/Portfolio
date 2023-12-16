@@ -5,8 +5,8 @@ permalink: /career/
 
 ## 클라이언트 프로그래머
 - 5년간 유니티 엔진을 통한 실무 경험
-- <span style="background-color: #f1f8ff;">총 2번의 프로젝트 글로벌 출시 및 라이브 서비스 경험</span>
-- <span style="background-color: #f1f8ff;">출시 전 개발 경험, 출시 이후 업데이트 개발 경험, 언어별 대응, 서버 통신 간 지연 시간에 대한 예외 상황에 대한 처리</span> 등 여러 실무 경험
+- <span class="color-box-blue">총 2번의 프로젝트 글로벌 출시 및 라이브 서비스 경험</span>
+- <span class="color-box-blue">출시 전 개발 경험, 출시 이후 업데이트 개발 경험, 언어별 대응, 서버 통신 간 지연 시간에 대한 예외 상황에 대한 처리</span> 등 여러 실무 경험
 <br><br>
 
 ## 기술 스택
@@ -18,7 +18,9 @@ permalink: /career/
 **2018.09 ~ 재직중**, "해긴" 선임(대리) - 유니티 엔진을 이용한 프로젝트 진행
 <br><br>
 
-## <span style="background-color: #fff5b1;">"데미안 전기"</span>
+<!--![Icon](/assets/img/icon/demian_saga.jpg){: width="40" height="40"}-->
+## <img src="{{ site.baseurl }}/assets/img/icon/demian_saga.jpg" class="Icon"><span class="color-box-orange">데미안전기</span>
+
 **2023년 4월 글로벌 출시 ~ 현재 서비스 및 유지 보수 중**
 
 **구글플레이스토어, 앱스토어, 원스토어 출시**
@@ -45,7 +47,9 @@ permalink: /career/
 %}
 <br>
 
-## <span style="background-color: #fff5b1;">"오버독스"</span>
+<!--![Icon](/assets/img/icon/overdox.jpg){: width="40" height="40"}-->
+## <img src="{{ site.baseurl }}/assets/img/icon/overdox.jpg" class="Icon"><span class="color-box-blue">오버독스</span>
+
 **2019년 8월 글로벌 출시 ~ 현재 서비스 및 유지 보수 중**
 
 **구글플레이스토어, 앱스토어, 원스토어, 갤럭시스토어 출시**

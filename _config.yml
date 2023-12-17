@@ -11,7 +11,9 @@ blocked_ips:
   
 # Author
 author:
-  name: Moon Dongjun
+  name_en: Moon Dongjun
+  name_ko: 문동준
+  job: 게임 클라이언트 프로그래머
   desc: 게임 클라이언트 프로그래머
   email: ehdwns0126@naver.com
   selfie: assets/img/profile.jpg

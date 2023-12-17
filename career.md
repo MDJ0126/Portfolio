@@ -15,9 +15,11 @@ permalink: /career/
 <br><br>
 
 ## 경력 사항
-**2018.09 ~ 재직중**, "해긴" 선임(대리) - 유니티 엔진을 이용한 프로젝트 진행
+**2018.09 ~ 재직중**, "해긴" 선임(대리)
+- 유니티 엔진을 이용한 글로벌 프로젝트 2개 출시
 <br><br>
 
+## 주요 프로젝트
 <!--![Icon](/assets/img/icon/demian_saga.jpg){: width="40" height="40"}-->
 ## <img src="{{ site.baseurl }}/assets/img/icon/demian_saga.jpg" class="Icon"><span class="color-box-orange">데미안전기</span>
 

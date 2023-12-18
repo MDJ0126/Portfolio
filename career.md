@@ -15,13 +15,17 @@ permalink: /career/
 <br><br>
 
 ## 경력 사항
-<img width="20%" height="20%" src="{{ site.baseurl }}/assets/img/icon/haegin_logo.jpg">
-**2018.09 ~ 재직중**, "해긴" 선임(대리)
-- "데미안전기" 글로벌 출시
-- "오버독스" 글로벌 출시
-<br><br>
+{% include businesscard.html 
+	logo_url="/assets/img/icon/haegin_logo.jpg"
+	company="㈜ 해긴"
+	job_title="선임(대리)"
+	date="2018.09 ~ 재직중"
+	service="'데미안전기' 글로벌 출시<br>'오버독스' 글로벌 출시"
+%}
+<br>
 
 ## 주요 프로젝트
+
 <!--![Icon](/assets/img/icon/demian_saga.jpg){: width="40" height="40"}-->
 ## <img src="{{ site.baseurl }}/assets/img/icon/demian_saga.jpg" class="Icon"><span class="color-box-orange">데미안전기</span>
 
@@ -50,6 +54,7 @@ permalink: /career/
   image2="/demian_saga/2.jpg"
   image3="/demian_saga/3.jpg"
 %}
+
 <br>
 
 <!--![Icon](/assets/img/icon/overdox.jpg){: width="40" height="40"}-->

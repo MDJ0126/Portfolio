@@ -1,0 +1,47 @@
+.business
+{
+	&-card {
+		display: block;
+		background-color: #fff;
+		width: 380px;
+		height: 160px;
+		padding: 25px;
+		margin: 25px 0;
+		border-radius: 10px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	}
+	
+	&-company {
+		font-family: "Helvetica Neue","Segoe UI",Helvetica,Arial,sans-serif;
+		font-size: 13px;
+		text-align: center;
+	}
+
+	&-profile-pic {
+		width: 150px;
+		height: auto;
+		margin: -17px auto 0;
+		object-fit: cover;
+	}
+
+	&-name {
+		text-align: right;
+		font-size: 18px;
+		font-weight: bold;
+		margin-bottom: 5px;
+	}
+
+	&-job-title {
+		margin: 8px auto 0;
+		text-align: right;
+		font-size: 14px;
+		color: #888;
+		margin-bottom: 10px;
+	}
+
+	&-desc {
+		text-align: right;
+		font-size: 14px;
+		color: #555;
+	}
+}

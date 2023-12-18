@@ -1,47 +1,82 @@
-.business
-{
-	&-card {
-		display: block;
-		background-color: #fff;
-		width: 380px;
-		height: 160px;
-		padding: 25px;
-		margin: 25px 0;
-		border-radius: 10px;
-		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	}
-	
-	&-company {
-		font-family: "Helvetica Neue","Segoe UI",Helvetica,Arial,sans-serif;
-		font-size: 13px;
-		text-align: center;
-	}
+.business {
+  position: relative;
+  will-change: transform;
 
-	&-profile-pic {
-		width: 150px;
-		height: auto;
-		margin: -17px auto 0;
-		object-fit: cover;
-	}
+  &-left {
+	float: left;
+  }
+  
+  &-card {
+    cursor: pointer;
+    display: block;
+    background-color: #fff;
+    width: 380px;
+    height: 160px;
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-out;
 
-	&-name {
-		text-align: right;
-		font-size: 18px;
-		font-weight: bold;
-		margin-bottom: 5px;
-	}
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
 
-	&-job-title {
-		margin: 8px auto 0;
-		text-align: right;
-		font-size: 14px;
-		color: #888;
-		margin-bottom: 10px;
-	}
+  &-company {
+    font-family: "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    text-align: center;
+  }
 
-	&-desc {
-		text-align: right;
-		font-size: 14px;
-		color: #555;
-	}
+  &-profile-pic {
+    width: 150px;
+    height: auto;
+    margin: -17px auto 0;
+    object-fit: cover;
+  }
+  
+  &-right {
+	float: right;
+	margin: 10px 0px 0px;
+  }
+
+  &-name,
+  &-job-title,
+  &-desc {
+    transition: color 0.3s ease-out;
+    text-align: right;
+  }
+
+  &-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  &-job-team {
+    margin: 8px auto 0;
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 10px;
+  }
+
+  &-job-title {
+    margin: 8px auto 0;
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+  }
+
+  &-desc {
+    margin: 15px 0px 0px;
+    font-size: 14px;
+    color: #555;
+  }
+
+  &-card:hover .business-name,
+  &-card:hover .business-job-title,
+  &-card:hover .business-desc {
+    color: black;
+  }
 }

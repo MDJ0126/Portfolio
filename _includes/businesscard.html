@@ -1,10 +1,13 @@
-<div class="business-card">
-	<div style="float: left;">
+<div class="business-card" onclick="window.open('{{ include.link }}');">
+	<div class="business-left">
 		<img src="{{ site.baseurl }}{{ include.logo_url }}" alt="Profile Picture" class="business-profile-pic">
 		<div class="business-company">{{ include.company }}</div>
 	</div>
-	<div style="float: right;">
-		<div class="business-job-title">{{ include.job_title }}</div>
+	<div class="business-right">
+		<div style="text-align: right;">
+			<span class="business-job-team">{{ include.team }}</span>
+			<span class="business-job-title">{{ include.job_title }}</span>
+		</div>
 		<div class="business-desc">
 			{{ include.date }}<br>
 			{{ include.service }}

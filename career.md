@@ -10,8 +10,9 @@ permalink: /career/
 <br><br>
 
 ## 기술 스택
-* _Unity3D engine_
-* _C#_
+<img src="{{ site.baseurl }}/assets/img/icon/unity.png" class="Icon-mini"> _Unity3D engine_
+
+<img src="{{ site.baseurl }}/assets/img/icon/csharp.png" class="Icon-mini"> _C#_
 <br><br>
 
 ## 경력 사항
@@ -24,6 +25,7 @@ permalink: /career/
 	date="2018.09 ~ 재직중"
 	service="'데미안전기' 글로벌 출시<br>'오버독스' 글로벌 출시"
 %}
+
 <br>
 
 ## 주요 프로젝트

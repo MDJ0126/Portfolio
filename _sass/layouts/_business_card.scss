@@ -10,7 +10,7 @@
 	display: inline-block;
     cursor: pointer;
     background-color: #fff;
-    width: 90%;
+    width: 100%;
 	max-width: 350px;
 	height: auto;
     max-height: 160px;
@@ -32,8 +32,7 @@
   }
 
   &-profile-pic {
-    width: 150px;
-    width: 125px;
+    width: 8em;
     height: auto;
     margin: -15px auto 0;
     margin: 0px auto 0;

@@ -28,10 +28,9 @@ permalink: /career/
 
 <br>
 
-## 주요 프로젝트
-
 <!--![Icon](/assets/img/icon/demian_saga.jpg){: width="40" height="40"}-->
 ## <img src="{{ site.baseurl }}/assets/img/icon/demian_saga.jpg" class="Icon"><span class="color-box-orange">데미안전기</span>
+<hr>
 
 **2023년 4월 글로벌 출시 ~ 현재 서비스 및 유지 보수 중**
 
@@ -59,10 +58,10 @@ permalink: /career/
   image3="/demian_saga/3.jpg"
 %}
 
-<br>
 
 <!--![Icon](/assets/img/icon/overdox.jpg){: width="40" height="40"}-->
 ## <img src="{{ site.baseurl }}/assets/img/icon/overdox.jpg" class="Icon"><span class="color-box-blue">오버독스</span>
+<hr>
 
 **2019년 8월 글로벌 출시 ~ 현재 서비스 및 유지 보수 중**
 
@@ -86,7 +85,6 @@ permalink: /career/
   image2="/overdox/2.jpg"
   image3="/overdox/3.jpg"
 %}
-<br>
 
 ### 학력
  * 2011년 ~ 2016년 - 김포대학교 컴퓨터공학과 졸업

@@ -2,7 +2,7 @@
 layout: post
 category: portfolio
 thumbnail: "design_data_table.jpg"
-title:  "Design Data Table"
+title:  "Design Data Table 출시"
 info: "유니티 에셋 개발툴"
 tech: "Unity Engine Editor"
 type: 개인

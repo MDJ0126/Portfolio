@@ -3,7 +3,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>{{ site.title }}</title>
-
+  <script>
+	if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
+		// 로컬 주소인 경우
+		document.title = document.title + " (local)";
+	}
+  </script>
   <!-- Java Scripts -->
   <script src="{{ "/assets/js/bounceAnimation.js" | relative_url }}"></script>
   <script src="{{ "/assets/js/modal.js" | relative_url }}"></script>

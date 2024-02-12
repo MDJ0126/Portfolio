@@ -21,7 +21,7 @@ permalink: /career/
 	company="㈜ 해긴"
 	link="https://www.haegin.kr/"
 	team="개발2팀"
-	job_title="선임(대리)"
+	job_title="책임 연구원"
 	date="2018.09 ~ 재직중"
 	service="'데미안전기' 글로벌 출시<br>'오버독스' 글로벌 출시"
 %}

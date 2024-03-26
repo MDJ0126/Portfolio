@@ -72,7 +72,11 @@ document.addEventListener('DOMContentLoaded', async function () {
 	// 결과 처리
 	// =========================================================
 	var isEnableSite = true;
-	if (!isAvailableIP || !isOpenSite)
+	if (isAvailableIP && isOpenSite)
+	{
+		isEnableSite = true;
+	}
+	else
 	{
 		isEnableSite = isUnlock;
 	}

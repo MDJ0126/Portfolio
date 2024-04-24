@@ -1,13 +1,13 @@
 <p align="center">
   {% if include.image3 %}
-    <img src="{{ site.baseurl }}/assets/img{{ include.image1 }}" width="32%" onclick="toggleModal(this.src)" style="display:inline-block;" class="modal-target-image">
-    <img src="{{ site.baseurl }}/assets/img{{ include.image2 }}" width="32%" onclick="toggleModal(this.src)" style="display:inline-block;" class="modal-target-image">
-    <img src="{{ site.baseurl }}/assets/img{{ include.image3 }}" width="32%" onclick="toggleModal(this.src)" style="display:inline-block;" class="modal-target-image">
+    <img src="{{ site.baseurl }}/assets/img{{ include.image1 }}" width="32%" onclick="toggleModal(this.src)" style="display:inline-block;" class="modal-target-image" loading="lazy">
+    <img src="{{ site.baseurl }}/assets/img{{ include.image2 }}" width="32%" onclick="toggleModal(this.src)" style="display:inline-block;" class="modal-target-image" loading="lazy">
+    <img src="{{ site.baseurl }}/assets/img{{ include.image3 }}" width="32%" onclick="toggleModal(this.src)" style="display:inline-block;" class="modal-target-image" loading="lazy">
   {% elsif include.image2 %}
-    <img src="{{ site.baseurl }}/assets/img{{ include.image1 }}" width="49%" onclick="toggleModal(this.src)" style="display:inline-block;" class="modal-target-image">
-    <img src="{{ site.baseurl }}/assets/img{{ include.image2 }}" width="49%" onclick="toggleModal(this.src)" style="display:inline-block;" class="modal-target-image">
+    <img src="{{ site.baseurl }}/assets/img{{ include.image1 }}" width="49%" onclick="toggleModal(this.src)" style="display:inline-block;" class="modal-target-image" loading="lazy">
+    <img src="{{ site.baseurl }}/assets/img{{ include.image2 }}" width="49%" onclick="toggleModal(this.src)" style="display:inline-block;" class="modal-target-image" loading="lazy">
   {% elsif include.image1 %}
-  <img src="{{ site.baseurl }}/assets/img{{ include.image1 }}" width="80%" onclick="toggleModal(this.src)" style="display:block;" class="modal-target-image">
+  <img src="{{ site.baseurl }}/assets/img{{ include.image1 }}" width="80%" onclick="toggleModal(this.src)" style="display:block;" class="modal-target-image" loading="lazy">
   {% endif %}
   <figcaption align="center">{{ include.image_desc }}</figcaption>
 </p>

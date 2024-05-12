@@ -5,8 +5,8 @@ permalink: /career/
 
 ## 클라이언트 프로그래머
 - 6년간 유니티 엔진을 통한 실무 경험
-- <span class="color-box-blue">총 2번의 프로젝트 글로벌 출시 및 라이브 서비스 경험</span>
-- <span class="color-box-blue">출시 전 개발 경험, 출시 이후 업데이트 개발 경험, 언어별 대응, 서버 통신 간 지연 시간에 대한 예외 상황에 대한 처리</span> 등 여러 실무 경험
+- <span class="color-box-blue">총 2개의 프로젝트 초기 개발부터 글로벌 출시 및 라이브 서비스 경험</span>
+- <span class="color-box-blue">캐릭터 전투 개발, 컨텐츠 개발, 언어별 대응, 서버 통신 간 지연 시간에 대한 예외 상황</span> 등 여러 실무 경험
 <br><br>
 
 ## 기술 스택

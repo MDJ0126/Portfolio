@@ -1,4 +1,77 @@
 ---
-layout: portfolio 
-title: Portfolio
+layout: base 
 ---
+
+<div class="portfolio">
+  {% for post in paginator.posts %}
+    {% if post.category == "portfolio" %}
+      <a href="{{ post.url | prepend: site.baseurl }}" class="portfolio-item">
+        <div class="post-thumbnail">
+          {% if post.thumbnail %}
+            <img class="portfolio-thumbnail" src="{{ site.baseurl }}/assets/thumbnails/{{ post.thumbnail }}" alt="thumbnail">
+          {% else %}
+            <img class="portfolio-thumbnail" src="{{ site.baseurl }}/assets/thumbnails/no_thumbnail.png" alt="thumbnail">
+          {% endif %}
+
+          {% if post.tag-red %}
+            <div class="overlayText-red">{{ post.tag-red }}</div>
+          {% endif %}
+
+          {% if post.tag-blue %}
+            <div class="overlayText-blue">{{ post.tag-blue }}</div>
+          {% endif %}
+
+          {% if post.tag-green %}
+            <div class="overlayText-green">{{ post.tag-green }}</div>
+          {% endif %}
+
+          {% if post.tag-gray %}
+            <div class="overlayText-gray">{{ post.tag-gray }}</div>
+          {% endif %}
+
+        </div>
+        <div class="post-board">
+          <h1 class="portfolio-title">{{ post.title }}</h1>
+          <div class="portfolio-line"></div>
+
+          <div class="portfolio-content"> 
+            <span class="portfolio-icon">
+              <i class="fa fa-sticky-note"></i><span class="portfolio-icon-text">[{{ post.type }}] {{ post.info }}</span>
+            </span>
+            </br>
+            <span class="portfolio-icon">
+              <i class="fa fa-calendar-alt"></i><span class="portfolio-icon-text">{{ post.date | date: "%B %d, %Y" }}</span>
+            </span>
+            </br>
+            <span class="portfolio-icon">
+              <i class="fa fa-cog"></i><span class="portfolio-icon-text">{{ post.tech }}</span>
+            </span>
+          </div>
+        </div>
+      </a>
+      </br>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="page-number prev">Prev</a>
+  {% endif %}
+  
+  <span class="spacer"></span>
+
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <span class="page-number current-page">{{ page }}</span>
+    {% else %}
+      <a style="width: 50px; height: 50px;" href="{{ site.baseurl }}{% if page == 1 %}/portfolio{% else %}/portfolio/page{{ page }}{% endif %}" class="page-number"> {{ page }} </a>
+    {% endif %}
+  {% endfor %}
+
+  <span class="spacer"></span>
+
+  {% if paginator.next_page %}
+    <a href="{{ site.baseurl }}{{ paginator.next_page_path }}" class="page-number next">Next</a>
+  {% endif %}
+</div>

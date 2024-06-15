@@ -7,7 +7,7 @@ layout: base
   2
 {% endif %}
 <div class="portfolio">
-  {% for post in site.posts %}
+  {% for post in paginator.posts %}
     {% if post.category == "portfolio" %}
       <a href="{{ post.url | prepend: site.baseurl }}" class="portfolio-item">
         <div class="post-thumbnail">

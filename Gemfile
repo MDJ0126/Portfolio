@@ -3,6 +3,5 @@
 source "https://rubygems.org"
 gem 'github-pages', group: :jekyll_plugins
 gem 'webrick'
-gem 'jekyll'
+gem 'jekyll', '~> 4.3.2'
 gem 'jekyll-paginate'
-gme 'jekyll', '~> 4.3.2'

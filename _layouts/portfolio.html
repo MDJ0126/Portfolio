@@ -1,11 +1,6 @@
 ---
 layout: base 
 ---
-{% if paginator %}
-  1
-{% else %}
-  2
-{% endif %}
 <div class="portfolio">
   {% for post in paginator.posts %}
     {% if post.category == "portfolio" %}

@@ -28,6 +28,34 @@ permalink: /career/
 
 <br>
 
+<!--![Icon](/assets/img/icon/overdox.jpg){: width="40" height="40"}-->
+## <img src="{{ site.baseurl }}/assets/img/icon/overdox.jpg" class="Icon"><span class="color-box-blue">오버독스</span>
+<hr>
+
+**2019년 8월 글로벌 출시 ~ 현재 서비스 및 유지 보수 중**
+
+**구글플레이스토어, 앱스토어, 원스토어, 갤럭시스토어 출시**
+
+ - **회사**: 해긴 (개발2팀)
+ - **장르**: 배틀로얄·액션
+ - **사용 기술**: Unity, C#
+ - **인력구성**: 클라이언트 파트 총 3명 (신입)
+ - **참여기간**: 2018년 09월 ~ 현재까지 유지 보수 중
+ - **주요 업무**
+  1. 컨텐츠 개발
+  2. 인앱 광고 보상 처리
+  3. 글로벌 출시 및 라이브 유지 보수
+
+ - 기타사항
+   - 신입으로 입사하여, 유니티 엔진 공부를 하면서 신입의 위치로써 담당할 수 있었던 업무들을 했었으며, 개발자로써 기초를 많이 다졌던 시기였습니다.
+{% include image.html
+  image1="/overdox/1.jpg"
+  image2="/overdox/2.jpg"
+  image3="/overdox/3.jpg"
+%}
+
+
+
 <!--![Icon](/assets/img/icon/demian_saga.jpg){: width="40" height="40"}-->
 ## <img src="{{ site.baseurl }}/assets/img/icon/demian_saga.jpg" class="Icon"><span class="color-box-orange">데미안전기</span>
 <hr>
@@ -54,32 +82,6 @@ permalink: /career/
   image3="/demian_saga/3.jpg"
 %}
 
-
-<!--![Icon](/assets/img/icon/overdox.jpg){: width="40" height="40"}-->
-## <img src="{{ site.baseurl }}/assets/img/icon/overdox.jpg" class="Icon"><span class="color-box-blue">오버독스</span>
-<hr>
-
-**2019년 8월 글로벌 출시 ~ 현재 서비스 및 유지 보수 중**
-
-**구글플레이스토어, 앱스토어, 원스토어, 갤럭시스토어 출시**
-
- - **회사**: 해긴 (개발2팀)
- - **장르**: 배틀로얄·액션
- - **사용 기술**: Unity, C#
- - **인력구성**: 클라이언트 파트 총 3명 (신입)
- - **참여기간**: 2018년 09월 ~ 현재까지 유지 보수 중
- - **주요 업무**
-  1. 컨텐츠 개발
-  2. 인앱 광고 보상 처리
-  3. 글로벌 출시 및 라이브 유지 보수
-
- - 기타사항
-   - 신입으로 입사하여, 유니티 엔진 공부를 하면서 신입의 위치로써 담당할 수 있었던 업무들을 했었으며, 개발자로써 기초를 많이 다졌던 시기였습니다.
-{% include image.html
-  image1="/overdox/1.jpg"
-  image2="/overdox/2.jpg"
-  image3="/overdox/3.jpg"
-%}
 
 ### 학력
  * 2011년 ~ 2016년 - 김포대학교 컴퓨터공학과 졸업

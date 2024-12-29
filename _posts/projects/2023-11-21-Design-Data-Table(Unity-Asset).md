@@ -1,6 +1,6 @@
 ---
 layout: post
-category: portfolio
+category: projects
 thumbnail: "design_data_table.jpg"
 title:  "Design Data Table 출시"
 info: "유니티 에셋 개발툴"

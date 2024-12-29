@@ -1,4 +1,4 @@
-.portfolio {
+.projects {
   &-item {
     border-bottom: 1px solid $grey-2;
     color: $default-color;
@@ -6,8 +6,8 @@
     padding: 2rem 0;
 	width: 100%;
 
-    &:hover .portfolio-line,
-    &:focus .portfolio-line {
+    &:hover .projects-line,
+    &:focus .projects-line {
       width: 5rem;
     }
 
